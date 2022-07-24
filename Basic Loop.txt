@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	char response = 'y';
+
+	while(response == 'y') {
+		// Loop body
+		int num;
+
+		cout << "Enter a interger: ";
+		cin >> num;
+
+		if (num % 2 == 0) {
+			cout << num << " is even.\n";
+		}
+		else {
+			cout << num << " is odd.\n";
+		}
+
+		// Update loop variable
+		cout << "Do you wish to continue? (y/n): ";
+		cin >> response;
+	}
+
+	system("pause");
+	return 0;
+}

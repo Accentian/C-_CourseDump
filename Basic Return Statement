@@ -1,0 +1,16 @@
+
+#include <iostream>
+using namespace std;
+
+int ComputeSquare(int numToSquare) {
+   return numToSquare * numToSquare;
+}
+
+int main() {
+   int numSquared;
+
+   numSquared = ComputeSquare(7);
+   cout << "7 squared is " << numSquared << endl;
+
+   return 0;
+}

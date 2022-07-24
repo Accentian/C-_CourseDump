@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   int currC;
+   double equivalentF;
+   
+   for (currC = -10; currC <= 40; currC += 5) {
+      equivalentF =  (currC * 9.0 / 5.0) + 32.0;
+
+      cout << currC << " C is ";
+      cout << equivalentF << " F";
+      cout << endl;
+   }
+   
+   return 0;
+}
+
+/**-10 C is 14 F
+-5 C is 23 F
+0 C is 32 F
+5 C is 41 F
+10 C is 50 F
+15 C is 59 F
+20 C is 68 F
+25 C is 77 F
+30 C is 86 F
+35 C is 95 F
+40 C is 104 F**/

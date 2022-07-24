@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+/* Define your function here */ 
+double SecondsToJiffies(double userSeconds) {
+   return 100 * userSeconds;
+}
+
+int main() {
+   /* Type your code here. Your code must call the function.  */
+   double numSeconds;
+   cin >> numSeconds;
+   
+   cout << fixed << setprecision(2);
+   cout << SecondsToJiffies(numSeconds) << endl;
+   return 0;
+}

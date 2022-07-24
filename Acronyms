@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+/* Define your function here */
+string CreateAcronym(string userPhrase) {
+   int i;
+   string acronym = "";
+   int stringSize = userPhrase.length();
+   
+   for (i = 0; i < stringSize; i++) {
+      if (isupper(userPhrase.at(i))) {
+         acronym = acronym + userPhrase.at(i);
+      }
+   }
+   return acronym;
+}
+
+int main() {
+   /* Type your code here */
+   string userString = "";
+   getline(cin, userString);
+   
+   cout << CreateAcronym(userString) << endl;
+   
+   return 0;
+}

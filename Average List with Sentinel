@@ -1,0 +1,37 @@
+/**Loops are commonly used to process an input list of values. A sentinel value is a special value indicating the end of a list, such as a list of positive integers ending with 0, as in 10 1 6 3 0. The example below computes the average of an input list of positive integers, ending with 0. The 0 is not included in the average.**/
+
+#include <iostream>
+using namespace std;
+
+// Outputs average of list of positive integers
+// List ends with 0 (sentinel)
+// Ex: 10 1 6 3 0  yields (10 + 1 + 6 + 3) / 4, or 5
+
+int main() {
+   int currValue;
+   int valuesSum;
+   int numValues;
+
+   valuesSum = 0;
+   numValues = 0;
+
+   cin >> currValue;
+
+   while (currValue > 0) { // Get values until 0 (or less)
+      valuesSum = valuesSum + currValue;
+      numValues = numValues + 1;
+      cin >> currValue;
+   }
+
+   cout << "Average: " << (valuesSum / numValues) << endl;
+
+   return 0;
+}
+/** 
+10 1 6 3 0
+Average: 5
+
+...
+
+90 70 30 10 99 1 0
+Average: 50**/
