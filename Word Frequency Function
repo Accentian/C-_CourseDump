@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector> 
+#include <string>
+using namespace std;
+
+/* Define your function here */
+int GetFrequencyOfWord(vector<string> wordsList, string currWord) {
+   unsigned int i;
+   int count = 0;
+   for (i = 0; i < wordsList.size(); i++) {
+      if (currWord == wordsList.at(i)) {
+         count++;
+      }
+   }
+   return count;
+}
+
+int main() {
+   /* Type your code here */
+   vector<string> userWord;
+   vector<int> countList;
+   int size = 0;
+   unsigned int i;
+   string currWord;
+   
+   cin >> size;
+   userWord.resize(size);
+   countList.resize(size);
+   
+   for (i = 0; i < userWord.size(); i++) {
+      cin >> userWord.at(i);
+   }
+   for (i = 0; i < userWord.size(); i++) {
+      currWord = userWord.at(i);
+      countList.at(i) = GetFrequencyOfWord(userWord, currWord);
+   }
+   for (i = 0; i < userWord.size(); i++) {
+      cout << userWord.at(i) << " ";
+      cout << countList.at(i) << endl;
+   }
+
+   return 0;
+}

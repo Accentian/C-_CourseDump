@@ -1,0 +1,44 @@
+#include <iostream>
+// FIXME include string library
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   string text;
+   int index;
+   
+   cout << "Enter text:" << endl;
+   getline(cin, text);
+   
+   cout << "You entered: " << text << endl;
+   
+   if (text.find("BFF") != string::npos) {
+      index = static_cast<int>(text.find("BFF"));
+      text.replace(index, 3, "best friend forever");
+   }
+   
+   if (text.find("IDK") != string::npos) {
+      index = static_cast<int>(text.find("IDK"));
+      text.replace(index, 3, "I don't know");
+   }
+   
+   if (text.find("JK") != string::npos) {
+      index = static_cast<int>(text.find("JK"));
+      text.replace(index, 2, "just kidding");
+   }
+   
+   if (text.find("TMI") != string::npos) {
+      index = static_cast<int>(text.find("TMI"));
+      text.replace(index, 3, "too much information");
+   }
+   
+   if (text.find("TTYL") != string::npos) {
+      index = static_cast<int>(text.find("TTYL"));
+      text.replace(index, 4, "talk to you later");
+   }
+   
+   cout << "Expanded: " << text << endl;
+   
+   return 0;
+}

@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string> // Note: This library is needed to use the string type
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   string text;
+   
+   cout << "Input an abbreviation:" << endl;
+   cin >> text;
+   
+   if (text == "LOL") {
+      
+      cout << "laughing out loud" << endl;
+   }
+   
+   else if (text == "IDK") {
+      cout << "I don't know" << endl;
+   }
+   
+   else if (text == "BFF") {
+      cout << "best friends forever" << endl;
+   }
+   
+   else if (text == "IMHO") {
+      cout << "in my humble opinion" << endl;
+   }
+   
+   else if (text == "TMI") {
+      cout << "too much information" << endl;
+   }
+   
+   else {
+      cout << "Unknown" << endl;
+   }
+     
+
+   return 0;
+}

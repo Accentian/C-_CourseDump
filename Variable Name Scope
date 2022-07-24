@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+   // int val1  = userNum;    // ERROR
+  int userNum = 2;           // Name valid to main's "}"  
+  int newNum  = userNum + 1;
+  int i;
+
+   for (i = 0; i < newNum; ++i) {
+     int valSquared;        // Name valid to for's "}"
+     valSquared = userNum * userNum;
+     cout << i << " squared: " << valSquared << endl;
+  }
+
+   // cout << "Last value: " << valSquared << endl; // ERROR
+
+   return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+
+int main()
+{
+    
+
+double x = 8.5;
+    
+
+cout << pow(64, (1.0/3)) << endl;
+    
+cout << pow(4786, (1.0/3)) << endl;
+
+
+// To round the value of x: floor(x + 0.5)
+
+cout << floor(x + 0.5) << endl;
+
+
+return 0;
+
+
+}

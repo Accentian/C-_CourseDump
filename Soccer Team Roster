@@ -1,0 +1,116 @@
+#include <iostream>
+// FIXME include vector library
+#include <vector>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   const int NUM_PLAYERS = 5;
+   vector<int> players(NUM_PLAYERS);
+   vector<int> ratings(NUM_PLAYERS);
+   
+   for (int i = 0; i < NUM_PLAYERS; i++) {
+      cout << "Enter player " << i+1 << "'s jersey number:" << endl;
+      cin >> players.at(i);
+      cout << "Enter player " << i+1 << "'s rating:" << endl;
+      cin >> ratings.at(i);
+      cout << endl;
+   }
+   
+   cout << "ROSTER" << endl;
+   for (int i = 0; i < players.size(); i++) {
+      cout << "Player " << i+1 << " -- Jersey number: " 
+      << players.at(i) << ", Rating: " 
+      << ratings.at(i) << endl;
+   }
+   cout << endl;
+   
+   // Menu
+   
+   char choice = 'p';
+   while (choice != 'q') {
+      cout << "MENU\n";
+      cout << "a - Add player\n";
+      cout << "d - Remove player\n";
+      cout << "u - Update player rating\n";
+      cout << "r - Output players above a rating\n";
+      cout << "o - Output roster\n";
+      cout << "q - Quit\n";
+      cout << endl;
+      cout << "Choose an option:\n";
+      cin >> choice;
+      
+      int jerseyNum, ratingNum;
+      switch (choice) {
+         case 'a':
+            cout << "Enter a new player's jersey number:" << endl;
+            cin >> jerseyNum;
+            cout << "Enter the player's rating:" << endl;
+            cin >> ratingNum;
+            players.push_back(jerseyNum);
+            ratings.push_back(ratingNum);
+            cout << endl;
+         break;
+         
+         case 'd':
+            cout << "Enter a jersey number:\n";
+            cin >> jerseyNum;
+            for (int i = 0; i < players.size(); i++) {
+               if (players.at(i) == jerseyNum) {
+                  players.erase(players.begin() + i);
+                  ratings.erase(ratings.begin() + i);
+                  break;
+               }
+            }
+         break;
+         
+         case 'u':
+            cout << "Enter a jersey number: " << endl;
+            cin >> jerseyNum;
+            cout << "Enter a new rating for player:" << endl;
+            cin >> ratingNum;
+            for (int i = 0; i < players.size(); i++) {
+               if (players.at(i) == jerseyNum) {
+                  ratings.at(i) = ratingNum;
+                  break;
+               }
+            }
+            cout << endl;
+         break;
+         
+         case 'r':
+            cout << "Enter a rating:\n";
+            cin >> ratingNum;
+            cout << "ABOVE " << ratingNum << endl;
+            for(int i = 0; i < ratings.size(); i++) {
+               if (ratings.at(i) > ratingNum) {
+                  cout << "Player " << i + 1 << " -- Jersey number: "
+                  << players.at(i) << ", Rating: "
+                  << ratings.at(i) << endl;
+               }
+            }
+            cout << endl;
+         break;
+         
+         case 'o':
+            cout << "ROSTER" << endl;
+            for (int i = 0; i < players.size(); i++) {
+               cout << "Player " << i+1 << " -- Jersey number: " 
+               << players.at(i) << ", Rating: " 
+               << ratings.at(i) << endl;
+            }
+            cout << endl;
+         break;
+         
+         case 'q': //cout << "Go Team!\n";
+         break;
+         
+         default: //cout << "Invalid menu choice\n";
+         break;
+      }
+   }
+   
+   
+   return 0;
+}

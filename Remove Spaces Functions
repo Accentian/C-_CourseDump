@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+/* Define your function here */
+string RemoveSpaces(string userString) {
+   int textIndex;
+   
+   while (userString.find(" ") != string::npos) {
+      textIndex = userString.find(" ");
+      userString.replace(textIndex, 1, "");
+   }
+   
+   return userString;
+}
+
+int main() {
+   /* Type your code here. Your code must call the function.  */
+   string sentence;
+   getline(cin, sentence);
+   
+   cout << RemoveSpaces(sentence) << endl;
+   
+   return 0;
+}

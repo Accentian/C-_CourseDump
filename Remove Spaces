@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   
+   /* Type your code here. */
+   string userText;
+   int textIndex;
+   getline(cin, userText);
+   
+   while (userText.find(" ") != string::npos) {
+      textIndex = userText.find(" ");
+      userText.replace(textIndex, 1, "");
+   }
+
+   cout << userText<< endl;
+
+   return 0;
+}

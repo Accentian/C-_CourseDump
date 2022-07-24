@@ -1,0 +1,21 @@
+// Flawed
+int X = 33;
+int Y = 55;
+int tempVal = 0;
+
+X = Y;
+Y = X;
+
+// Print X and Y
+
+----------------------------
+
+int X = 33;
+int Y = 55;
+int tempVal = 0;
+
+tempVal = X;
+X = Y;
+Y = tempVal;
+
+// Print X and Y

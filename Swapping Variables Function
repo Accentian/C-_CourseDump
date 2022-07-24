@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+/* Define your function here */
+void SwapValues(int& userVal1, int& userVal2) {
+   int holdVal = 0;
+   
+   holdVal = userVal1;
+   userVal1 = userVal2;
+   userVal2 = holdVal;
+}
+
+int main() {
+   /* Type your code here. Your code must call the function.  */
+   int num1, num2;
+   cin >> num1;
+   cin >> num2;
+   
+   SwapValues(num1, num2);
+   
+   cout << num1 << " " << num2 << endl;
+   
+   return 0;
+}

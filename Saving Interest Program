@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   double initialSavings;  // User-entered initial savings
+   double interestRate;    // Interest rate
+   double currSavings;     // Current savings with interest
+   int i;                  // Loop variable
+
+   cout << "Enter initial savings: ";
+   cin  >> initialSavings;
+
+   cout << "Enter interest rate: ";
+   cin  >> interestRate;
+
+   cout << endl << "Annual savings for 10 years: " << endl;
+
+   currSavings = initialSavings;
+   for (i = 0; i < 10; ++i) {
+      cout << "$" << currSavings << endl;
+      currSavings = currSavings + (currSavings * interestRate);
+   }
+
+   return 0;
+}
+
+/**Enter initial savings: 10000
+Enter interest rate: 0.05
+
+Annual savings for 10 years: 
+$10000
+$10500
+$11025
+$11576.2
+$12155.1
+$12762.8
+$13401
+$14071
+$14774.6
+$15513.3**/

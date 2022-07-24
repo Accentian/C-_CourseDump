@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+/* Define your function here */
+void SortVector(vector<int>& myVec) {
+   sort(myVec.begin(), myVec.end());
+}
+
+int main() {
+   /* Type your code here */
+   int size = 0;
+   vector<int> userNum;
+   
+   cin >> size;
+   userNum.resize(size);
+   
+   for (unsigned int i = 0; i < userNum.size(); i++) {
+      cin >> userNum.at(i);
+   }
+   
+   SortVector(userNum);
+   for (unsigned int i = 0; i < userNum.size(); i++) {
+      cout << userNum.at(i) << " ";
+   }
+   cout << endl;
+
+   return 0;
+}
