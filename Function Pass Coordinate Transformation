@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+/* Your solution goes here  */
+void CoordTransform(int xVal, int yVal, int& xNewVal, int& yNewVal ) {
+   xNewVal = (xVal + 1) * 2;
+   yNewVal = (yVal + 1) * 2;
+   return;
+}
+
+int main() {
+   int xValNew;
+   int yValNew;
+   int xValUser;
+   int yValUser;
+
+   cin >> xValUser;
+   cin >> yValUser;
+
+   CoordTransform(xValUser, yValUser, xValNew, yValNew);
+   cout << "(" << xValUser << ", " << yValUser << ") becomes (" << xValNew << ", " << yValNew << ")" << endl;
+
+   return 0;
+}

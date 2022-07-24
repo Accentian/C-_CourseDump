@@ -1,0 +1,76 @@
+#include <iostream>
+#include <cmath> // To use "pow" function
+using namespace std;
+
+/* Program to convert given-year U.S. dollars to
+   current dollars, using simplistic method of 4% annual inflation.
+   Source: http://inflationdata.com (See: Historical) */
+
+// (Function DECLARATION)
+double ToCurrDollars (double pastDol, int pastYr, int currYr);
+
+int main() {
+   double pastDol;        // Starting dollar amount
+   double currDol;        // Ending dollar amount (converted value)
+   int pastYr;            // Starting year
+   int currYr;            // Ending year (converted to year)
+   
+   // Prompt user for previous year/dollar and current year
+   cout << "Enter current year: ";
+   cin >> currYr;
+   cout << "Enter past year: ";
+   cin >> pastYr;
+   cout << "Enter past dollars (Ex: 1000): ";
+   cin >> pastDol;
+   
+   // Function call to convert past to current dollars
+   currDol = ToCurrDollars(pastDol, pastYr, currYr);
+   
+   cout << "$" << pastDol << " in " << pastYr;
+   cout << " is about $" << currDol << " in ";
+   cout << currYr << endl;
+   
+   return 0;
+}
+
+// (Function DEFINITION)
+// Function returns equivalent value of pastDol in pastYr to currYr
+double ToCurrDollars (double pastDol, int pastYr, int currYr) {
+   double currDol;      // Equivalent dollar amount given inflation
+   
+   currDol = pastDol * pow(1.04, currYr - pastYr );
+   
+   return currDol;
+}
+
+/*
+Enter current year: 2015
+Enter past year: 1970
+Enter past dollars (Ex: 1000): 10000
+$10000 in 1970 is about $58411.8 in 2015
+(Note: Average annual U.S. income in 1970)
+
+...
+
+Enter current year: 2015
+Enter past year: 1970
+Enter past dollars (Ex: 1000): 23000
+$23000 in 1970 is about $134347 in 2015
+(Note: Average U.S. house price in 1970)
+
+...
+
+Enter current year: 2015
+Enter past year: 1933
+Enter past dollars (Ex: 1000): 37
+$37 in 1933 is about $922.435 in 2015
+(Note: Cost of Golden Gate Bridge, in millions)
+
+...
+
+Enter current year: 2015
+Enter past year: 1969
+Enter past dollars (Ex: 1000): 25
+$25 in 1969 is about $151.871 in 2015
+(Note: Cost of Apollo space program, in billions)
+*/

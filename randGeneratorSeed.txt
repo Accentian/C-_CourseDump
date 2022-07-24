@@ -1,0 +1,80 @@
+Type a statement using srand() to seed random number generation using variable seedVal. Then type two statements using rand() to print two random integers between (and including) 0 and 9. End with a newline. Ex:
+5
+7
+Note: For this activity, using one statement may yield different output (due to the compiler calling rand() in a different order). Use two statements for this activity. Also, after calling srand() once, do not call srand() again
+
+------------
+
+#include <iostream>
+#include <cstdlib>   // Enables use of rand()
+using namespace std;
+
+int main() {
+   int seedVal;
+
+   cin >> seedVal;
+
+   /* Your solution goes here  */
+   srand(seedVal);
+   cout << rand() % 10 << endl;
+   cout << rand() % 10 << endl;
+
+   return 0;
+}
+
+-------------
+
+Generate a random integer between -6 and 7 (inclusive)
+(rand() % 14) + -6;
+
+The divisor is the range size, so 7 - -6 + 1 = 14, which yields 0 to 13. That range is shifted by -6 to yield -6 to 7. 
+
+_NEXT_
+
+Generate a random integer between 6 and 25 (inclusive)
+(rand() % 20) + 6;
+
+The divisor is the range size, so 25 - 6 + 1 = 20, which yields 0 to 19. That range is shifted by 6 to yield 6 to 25. 
+
+_SUB_
+
+Goal: Random integer in the range 10 to 15.
+(rand() % 6) + ___ 
+
+ANSWER: 10
+
+rand() % 6 yields 6 values from 0 to 5. Adding 10 thus yields 6 values from 0 + 10 = 10 to 5 + 10 = 15.
+
+_NEXT_
+
+Goal: Random integer in the range 16 to 25.
+(rand() % ___) + 16
+
+ANSWER: 10
+
+25 - 16 + 1 = 10. rand() % 10 generates values from 0 to 9. Adding 16 yields 0 + 16 = 16 to 9 + 16 = 25.
+
+-------------
+Type two statements that use rand() to print 2 random integers between (and including) 100 and 149. End with a newline. Ex:
+101
+133
+Note: For this activity, using one statement may yield different output (due to the compiler calling rand() in a different order). Use two statements for this activity. Also, srand() has already been called; do not call srand() again.
+
+#include <iostream>
+#include <cstdlib>   // Enables use of rand()
+#include <ctime>     // Enables use of time()
+using namespace std;
+
+int main() {
+   int seedVal;
+
+   cin >> seedVal;
+   srand(seedVal);
+
+   /* Your solution goes here  */
+   cout << (rand() % 50) + 100 << endl;
+   cout << (rand() % 50) + 100 << endl;
+
+   return 0;
+}
+

@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+/* Define your function here */ 
+bool IsLeapYear(int userYear) {
+   if (userYear % 400 == 0) {
+      return true;
+   }
+   else if ((userYear % 4 == 0) && (userYear % 100 != 0)) {
+      return true;
+   }
+   else {
+      return false;
+   }
+}
+
+int main() {
+   /* Type your code here. Your code must call the function. */
+   int year;
+   cin >> year;
+   
+   if (IsLeapYear(year)) {
+      cout << year << " is a leap year." << endl;
+   }
+   else {
+      cout << year << " is not a leap year." << endl;
+   }
+
+   return 0;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+/* Your solution goes here  */
+void SwapVectorEnds(vector<int>& sortVector) {
+   unsigned int i;  
+   int tmpVal;
+
+   for (i = 0; i <= (sortVector.size() / 2); i++) {
+      tmpVal = sortVector.at(i); 
+      sortVector.at(i) = sortVector.at(sortVector.size() - 1 - i);
+      sortVector.at(sortVector.size() - 1 - i) = tmpVal;
+   }
+}
+
+int main() {
+   vector<int> sortVector(4);
+   unsigned int i;
+   int userNum;
+
+   for (i = 0; i < sortVector.size(); ++i) {
+      cin >> userNum;
+      sortVector.at(i) = userNum;
+   }
+
+   SwapVectorEnds(sortVector);
+
+   for (i = 0; i < sortVector.size(); ++i) {
+      cout << sortVector.at(i) << " ";
+   }
+   cout << endl;
+
+   return 0;
+}

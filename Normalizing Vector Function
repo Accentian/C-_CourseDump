@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+
+/* Define your function here */
+int GetMinimumInt(vector<int> listInts) {
+   int smallestNum;
+   unsigned int i;
+   
+   for(i = 0; i < listInts.size(); i++) {
+      if (i == 0) {
+         smallestNum = listInts.at(i);
+      }
+      else if (listInts.at(i) < smallestNum) {
+         smallestNum = listInts.at(i);
+      }
+   }
+   return smallestNum;
+}
+
+int main() {
+   /* Type your code here */
+   vector<int> userVal;
+   int size = 0;
+   unsigned int i;
+   
+   cin >> size;
+   userVal.resize(size);
+   
+   for(i = 0; i < userVal.size(); i++) {
+      cin >> userVal.at(i);
+   }
+   
+   int smallNum = GetMinimumInt(userVal);
+   
+   for(i = 0; i < userVal.size(); i++) {
+      userVal.at(i) = userVal.at(i) - smallNum;
+      cout << userVal.at(i) << " ";
+   }
+   cout << endl;
+   
+   return 0;
+}

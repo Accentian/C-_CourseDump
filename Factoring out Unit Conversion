@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+/* Your solution goes here  */
+double MphAndMinutesToMiles(double mph, double minutes) {
+   double hours, miles;
+   hours = minutes / 60;
+   miles = hours * mph;
+   return miles;
+}
+
+int main() {
+   double milesPerHour;
+   double minutesTraveled;
+
+   cin >> milesPerHour;
+   cin >> minutesTraveled;
+
+   cout << "Miles: " << MphAndMinutesToMiles(milesPerHour, minutesTraveled) << endl;
+
+   return 0;
+}

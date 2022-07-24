@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+
+/* Define your function here */
+vector<int> GetUserValues() {
+   vector<int> userNum;
+   int userSize;
+   unsigned int i;
+   
+   cin >> userSize;
+   userNum.resize(userSize);
+   
+   for(i = 0; i < userNum.size(); i++) {
+      cin >> userNum.at(i);
+   }
+   return userNum;
+}
+
+void OutputIntsLessThanOrEqualToThreshold(vector<int> userValues, int upperThreshold) {
+   cin >> upperThreshold;
+   
+   for(unsigned int i = 0; i < userValues.size(); i++) {
+      if (userValues.at(i) <= upperThreshold) {
+         cout << userValues.at(i) << " ";
+      }
+   }
+   cout << endl;
+}
+
+int main() {
+   /* Type your code here */
+   int userAmount = 0;
+   vector<int> vecVal = GetUserValues();
+   
+   cin >> userAmount;
+   OutputIntsLessThanOrEqualToThreshold(vecVal, userAmount);
+   
+   return 0;
+}

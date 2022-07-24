@@ -1,0 +1,21 @@
+#include <iostream>
+#include <iomanip>                 // For setprecision
+using namespace std;
+
+/* Define your function here */
+double MilesToLaps(double userMiles) {
+   return (userMiles / 0.25);
+}
+
+int main() {
+   /* Type your code here. Your code must call the function.  */
+   double userMiles;
+   cin >> userMiles;
+   
+   userMiles = MilesToLaps(userMiles);
+   cout << fixed << setprecision(2);
+   cout << userMiles << endl;
+   
+
+   return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   vector<int> userNum;
+   int size = 0;
+   int amountVal = 0;
+   unsigned int i;
+   
+   cin >> size;
+   userNum.resize(size);
+   
+   for(i = 0; i < userNum.size(); i++) {
+      cin >> userNum.at(i);
+   }
+   
+   cin >> amountVal;
+   
+   for(i = 0; i < userNum.size(); i++) {
+      if (userNum.at(i) <= amountVal) {
+         cout << userNum.at(i) << " ";
+      }
+   }
+   cout << endl;
+   
+   return 0;
+}

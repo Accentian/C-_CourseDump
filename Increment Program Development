@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   string phoneStr;   // User input: Phone number string
+   unsigned int i;    // Current element in phone number string
+   
+   cout << "Enter phone number: ";
+   cin >> phoneStr;
+   
+   for (i = 0; i < phoneStr.size(); ++i) { // For each element
+      cout << "Element " << i << " is: " << phoneStr.at(i) << endl;
+   }
+   
+   return 0;
+}

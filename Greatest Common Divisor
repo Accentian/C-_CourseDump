@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+// Output GCD of user-input numA and numB
+
+int main() {
+   int numA;  // User input
+   int numB;  // User input
+   
+   cout << "Enter first positive integer: ";
+   cin  >> numA;
+   
+   cout << "Enter second positive integer: ";
+   cin  >> numB;
+   
+   while (numA != numB) { // Euclid's algorithm
+      if (numB > numA) {
+         numB = numB - numA;
+      }
+      else {
+         numA = numA - numB;
+      }
+   }
+   
+   cout << "GCD is: " << numA << endl;
+   
+   return 0;
+}
+
+/**Enter first positive integer: 9
+Enter second positive integer: 7
+GCD is: 1
+
+...
+
+Enter first positive integer: 15
+Enter second positive integer: 10
+GCD is: 5
+
+...
+
+Enter first positive integer: 99
+Enter second positive integer: 33
+GCD is: 33
+
+...
+
+Enter first positive integer: 500
+Enter second positive integer: 500
+GCD is: 500**/

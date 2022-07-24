@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>   // Must include vector library to use vectors
+using namespace std;
+
+int main() {
+   vector<int> userInts; // A vector to hold the user's input integers
+
+   /* Type your code here. */
+   int numVals;
+   cin >> numVals;
+   
+   userInts.resize(numVals);
+   
+   for(int i = 0; i < userInts.size(); i++) {
+      cin >> userInts.at(i);
+   }
+   
+   // Print vector in reverse
+   for(int i = userInts.size() - 1; i >= 0; i--) {
+      cout << userInts.at(i) << " ";
+   }
+   
+   cout << endl;
+
+   return 0;
+}

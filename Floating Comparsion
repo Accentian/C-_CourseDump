@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+   double bodyTemp;
+
+   cout << "Enter body temperature in Fahrenheit: ";
+   cin >> bodyTemp;
+
+   if (fabs(bodyTemp - 98.6) < 0.0001) {
+      cout << "Temperature is exactly normal." << endl;
+   }
+   else if (bodyTemp > 98.6) {
+      cout << "Temperature is above normal." << endl;
+   }
+   else {
+      cout << "Temperature is below normal." << endl;
+   }
+
+   return 0;
+}
+
+/*Enter body temperature in Fahrenheit: 98.6
+Temperature is exactly normal.
+
+...
+
+Enter body temperature in Fahrenheit: 90
+Temperature is below normal.
+
+...
+
+Enter body temperature in Fahrenheit: 99
+Temperature is above normal.*/

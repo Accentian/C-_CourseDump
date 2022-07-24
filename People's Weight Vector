@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>              // For setprecision
+// FIXME include vector library
+#include <vector>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   const int SIZE = 5;
+   vector<double> userVal(SIZE);
+   double totalWeight, avgWeight, maxWeight = 0;
+   unsigned int i;
+   
+   for (i = 0; i < userVal.size(); i++) {
+      cout << "Enter weight " << i + 1 << ":\n";
+      cin >> userVal.at(i);
+   }
+   
+   cout << fixed << setprecision(2);
+   cout << "You entered: ";
+   
+   for (i = 0; i < userVal.size(); i++) {
+      cout << userVal.at(i) << " ";
+      if (i == 0) {
+         maxWeight = userVal.at(i);
+      }
+      else if (userVal.at(i) > maxWeight) {
+         maxWeight = userVal.at(i);
+      }
+   }
+   cout << endl << endl;
+   
+   for (i = 0; i < userVal.size(); i++) {
+      totalWeight = totalWeight + userVal.at(i);
+   }
+   cout << "Total weight: " << totalWeight << endl;
+   
+   avgWeight = totalWeight / SIZE;
+   cout << "Average weight: " << avgWeight << endl;
+   cout << "Max weight: " << maxWeight << endl;
+
+   return 0;
+}

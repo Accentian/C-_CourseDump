@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   vector<int> userVal;
+   int size = 0;
+   int smallestNum;
+   unsigned int i;
+   
+   cin >> size;
+   userVal.resize(size);
+   
+   for(i = 0; i < userVal.size(); i++) {
+      cin >> userVal.at(i);
+   }
+   
+   for(i = 0; i < userVal.size(); i++) {
+      if (i == 0) {
+         smallestNum = userVal.at(i);
+      }
+      else if (userVal.at(i) < smallestNum) {
+         smallestNum = userVal.at(i);
+      }
+   }
+   
+   for(i = 0; i < userVal.size(); i++) {
+      userVal.at(i) = userVal.at(i) - smallestNum;
+      cout << userVal.at(i) << " ";
+   }
+   
+   cout << endl;
+   
+   
+   return 0;
+}

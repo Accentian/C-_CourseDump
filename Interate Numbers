@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int num, userNum;
+	int f0 = 0, f1 = 0, f2 = 0, f3 = 0, f4 = 0;
+	int f5 = 0, f6 = 0, f7 = 0, f8 = 0, f9 = 0;
+
+	cout << "Enter an integer: ";
+	cin >> num;
+	userNum = num;
+
+	while (num > 0) {
+		int digit;
+
+		digit = num % 10;
+		num = num / 10;
+
+		switch (digit) {
+		case 0:
+			f0++;
+			break;
+		case 1:
+			f1++;
+			break;
+		case 2:
+			f2++;
+			break;
+		case 3:
+			f3++;
+			break;
+		case 4:
+			f4++;
+			break;
+		case 5:
+			f5++;
+			break;
+		case 6:
+			f6++;
+			break;
+		case 7:
+			f7++;
+			break;
+		case 8:
+			f8++;
+			break;
+		case 9:
+			f9++;
+			break;
+		default:
+			cout << "This case should never be reached\n";
+			break;
+		}
+
+	}
+
+	cout << "The number " << userNum << " contains:\n";
+	if (f0 > 0) {
+		cout << f0 << " zero(s)\n";
+	}
+	if (f1 > 0) {
+		cout << f1 << " one(s)\n";
+	}
+	if (f2 > 0) {
+		cout << f2 << " two(s)\n";
+	}
+	if (f3 > 0) {
+		cout << f3 << " three(s)\n";
+	}
+	if (f4 > 0) {
+		cout << f4 << " four(s)\n";
+	}
+	if (f5 > 0) {
+		cout << f5 << " five(s)\n";
+	}
+	if (f6 > 0) {
+		cout << f6 << " six(es)\n";
+	}
+	if (f7 > 0) {
+		cout << f7 << " seven(s)\n";
+	}
+	if (f8 > 0) {
+		cout << f8 << " eight(s)\n";
+	}
+	if (f9 > 0) {
+		cout << f9 << " nine(s)\n";
+	}
+	system("pause");
+
+	return 0;
+}

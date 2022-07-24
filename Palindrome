@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   int i, index, stringSize;
+   bool notMatch = false;
+   string userString, copyString;
+   
+   getline(cin, userString);
+   copyString = userString;
+   
+   while (userString.find(" ") != string::npos) {
+      index = userString.find(" ");
+      userString.replace(index, 1, "");
+   }
+   
+   stringSize = userString.size();
+   
+   for (i = 0; i < stringSize; i++) {
+      if (userString.at(i) != userString.at(stringSize - i - 1)){
+         notMatch = true;
+      }
+   }
+   
+   if (notMatch == true){
+      cout << copyString <<" is not a palindrome" << endl;
+   }
+   else{
+      cout << copyString <<" is a palindrome" << endl;
+   }
+
+   return 0;
+}

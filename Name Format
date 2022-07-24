@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   string firstName;
+   string middleName;
+   string lastName;
+   bool check = false;
+   
+   //cout << "Enter first name: ";
+   cin >> firstName;
+   //cout << "Enter first name: ";
+   cin >> middleName;
+   //cout << "Enter first name: ";
+   cin >> lastName;
+   
+   if (lastName.empty()) {
+      check = true;
+      lastName = middleName;
+      middleName = "";
+   }
+   
+   if (check == true) {
+      cout << lastName << ", " << firstName.at(0) << "." << endl;
+   }
+   
+   else{
+      cout << lastName << ", " << firstName.at(0) << "." << middleName.at(0) << "." << endl;
+   }
+   
+   return 0;
+}
