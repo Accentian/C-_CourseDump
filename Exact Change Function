@@ -1,0 +1,77 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+
+/* Define your function here */
+void ExactChange(int userTotal, vector<int>& coinVals) {
+   
+   int numDollars = userTotal / 100;
+   int leftOver = userTotal % 100;
+   coinVals.at(0) = numDollars;
+   
+   int numQuarters = leftOver / 25;
+   leftOver = leftOver % 25;
+   coinVals.at(1) = numQuarters;
+
+   int numDimes = leftOver / 10;
+   leftOver = leftOver % 10;
+   coinVals.at(2) = numDimes;
+
+   int numNickels = leftOver / 5;
+   leftOver = leftOver % 5;
+   coinVals.at(3) = numNickels;
+   
+   int numPennies = leftOver / 1;
+   leftOver = leftOver % 1;
+   coinVals.at(4) = numPennies;
+}
+
+int main() {
+   int inputVal;
+   vector<int> changeAmount(5); 
+   
+   /* Type your code here. Your code must call the function. */
+   cin >> inputVal;
+   ExactChange(inputVal, changeAmount);
+   
+   if (changeAmount.at(0) == 1){
+      cout << changeAmount.at(0) << " dollar" << endl;
+   }
+   else if ((changeAmount.at(0) > 0) && (changeAmount.at(0) > 1)) {
+      cout << changeAmount.at(0) << " dollars" << endl;
+   }
+   
+   if (changeAmount.at(1) == 1){
+      cout << changeAmount.at(1) << " quarter" << endl;
+   }
+   else if ((changeAmount.at(1) > 0) && (changeAmount.at(1) > 1)) {
+      cout << changeAmount.at(1) << " quarters" << endl;
+   }
+   
+   if (changeAmount.at(2) == 1){
+      cout << changeAmount.at(2) << " dime" << endl;
+   }
+   else if ((changeAmount.at(2) > 0) && (changeAmount.at(2) > 1)) {
+      cout << changeAmount.at(2) << " dimes" << endl;
+   }
+   
+   if (changeAmount.at(3) == 1){
+      cout << changeAmount.at(3) << " nickel" << endl;
+   }
+   else if ((changeAmount.at(3) > 0) && (changeAmount.at(3) > 1)) {
+      cout << changeAmount.at(3) << " nickels" << endl;
+   }
+   
+   if (changeAmount.at(4) == 1){
+      cout << changeAmount.at(4)  << " penny" << endl;
+   }
+   else if ((changeAmount.at(4) > 0) && (changeAmount.at(4) > 1)) {
+      cout << changeAmount.at(4) << " pennies" << endl;
+   }
+   
+   if (inputVal == 0) {
+      cout << "no change" << endl;
+   }
+   
+   return 0;
+}

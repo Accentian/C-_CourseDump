@@ -1,0 +1,22 @@
+int change = 63;
+
+int numQuarters = change / 25;
+int leftOver = change % 25;
+
+int numDimes = leftOver / 10;
+leftover = leftOver % 10;
+
+int numNickles = leftOver / 5;
+leftOver = leftOver % 5;
+
+cout << "To make change for " << change << " cents, gives " << endl;
+cout << numQuarters << " quarters, " << endl;
+cout << numDimes << " dimes, " << endl;
+cout << numNickles << " quarters, " << endl;
+cout << leftOver << " pennies." << endl;
+
+-----
+
+cout << rand() % (60 - 45 + 1) + 45 << endl;
+// 45 ... 60
+

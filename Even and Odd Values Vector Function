@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+/* Define your function here */
+bool IsVectorEven(vector<int> myVec) {
+   bool isEven = true;
+   for (unsigned int i = 0; i < myVec.size(); i++) {
+      if (myVec.at(i) % 2 == 0) {
+         isEven = true;
+      }
+      else {
+         isEven = false;
+         break;
+      }
+   }
+   return isEven;
+}
+
+bool IsVectorOdd(vector<int> myVec) {
+   bool isOdd = true;
+   for (unsigned int i = 0; i < myVec.size(); i++) {
+      if (myVec.at(i) % 2 != 0) {
+         isOdd = true;
+      }
+      else {
+         isOdd = false;
+         break;
+      }
+   }
+   return isOdd;
+}
+
+int main() {
+   /* Type your code here. */
+   int size = 0;
+   vector<int> userNum;
+   
+   cin >> size;
+   userNum.resize(size);
+   
+   for (unsigned int i = 0; i < userNum.size(); i++) {
+      cin >> userNum.at(i);
+   }
+   
+   if (IsVectorEven(userNum)){
+      cout << "all even" << endl;
+   }
+   else if (IsVectorOdd(userNum)) {
+      cout << "all odd" << endl;
+   }
+   else {
+      cout << "not even or odd" << endl;
+   }
+   
+   return 0;
+}

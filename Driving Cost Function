@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+/* Define your function here */
+double DrivingCost(double drivenMiles, double milesPerGallon, double dollarsPerGallon) {
+   double numGallons, totalCosts;
+   
+   numGallons = drivenMiles / milesPerGallon;
+   totalCosts = numGallons * dollarsPerGallon;
+   return totalCosts;
+}
+
+int main() {
+   /* Type your code here */
+   double mpg, dpg;
+   
+   cin >> mpg;
+   cin >> dpg;
+   
+   cout << fixed << setprecision(2);
+   
+   cout << DrivingCost(10, mpg, dpg) << " ";
+   cout << DrivingCost(50, mpg, dpg) << " ";
+   cout << DrivingCost(400, mpg, dpg) << endl;
+
+   return 0;
+}

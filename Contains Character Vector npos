@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   vector<string> wordList;
+   int size = 0;
+   char userChar;
+   unsigned int i;
+   
+   cin >> size;
+   wordList.resize(size);
+   
+   for (i = 0; i < wordList.size(); i++) {
+      cin >> wordList.at(i);
+   }
+   
+   cin >> userChar;
+   for (i = 0; i < wordList.size(); i++) {
+      if(wordList.at(i).find(userChar) != std::string::npos) {
+         cout << wordList.at(i) << endl;
+      }
+   }
+   
+
+   return 0;
+}

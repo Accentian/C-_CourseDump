@@ -1,0 +1,62 @@
+   /* Type your code here. */
+   int change;
+   
+   // cout << "Enter amount (integer only): " << endl;
+   cin >> change;
+   
+   int numDollars = change / 100;
+   int leftOver = change % 100;
+   
+   int numQuarters = leftOver / 25;
+   leftOver = leftOver % 25;
+
+   int numDimes = leftOver / 10;
+   leftOver = leftOver % 10;
+
+   int numNickels = leftOver / 5;
+   leftOver = leftOver % 5;
+   
+   int numPennies = leftOver / 1;
+   leftOver = leftOver % 1;
+   
+   if (numDollars == 1){
+      cout << numDollars << " Dollar" << endl;
+   }
+   else if ((numDollars > 0) && (numDollars > 1)) {
+      cout << numDollars << " Dollars" << endl;
+   }
+   
+   if (numQuarters == 1){
+      cout << numQuarters << " Quarter" << endl;
+   }
+   else if ((numQuarters > 0) && (numQuarters > 1)) {
+      cout << numQuarters << " Quarters" << endl;
+   }
+   
+   if (numDimes == 1){
+      cout << numDimes << " Dime" << endl;
+   }
+   else if ((numDimes > 0) && (numDimes > 1)) {
+      cout << numDimes << " Dimes" << endl;
+   }
+   
+   if (numNickels == 1){
+      cout << numNickels << " Nickel" << endl;
+   }
+   else if ((numNickels > 0) && (numNickels > 1)) {
+      cout << numNickels << " Nickels" << endl;
+   }
+   
+   if (numPennies == 1){
+      cout << numPennies  << " Penny" << endl;
+   }
+   else if ((numPennies > 0) && (numPennies > 1)) {
+      cout << numPennies << " Pennies" << endl;
+   }
+   
+   if (change == 0) {
+      cout << "No change" << endl;
+   }
+   
+   return 0;
+}

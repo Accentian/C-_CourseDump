@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   vector<int> numList;
+   int size, min, max = 0;
+   unsigned int i;
+   
+   cin >> size;
+   numList.resize(size);
+   
+   for (i = 0; i < numList.size(); i++) {
+      cin >> numList.at(i);
+   }
+   
+   cin >> min;
+   cin >> max;
+   
+   for (i = 0; i < numList.size(); i++) {
+      if (numList.at(i) >= min && numList.at(i) <= max) {
+         cout << numList.at(i) << " ";
+      }
+   }
+   
+   cout << endl;
+   
+   return 0;
+}

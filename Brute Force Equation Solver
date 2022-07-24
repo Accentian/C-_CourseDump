@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+   /* Type your code here. */
+   int a1, b1, c1, a2, b2, c2, equation1, equation2;
+   int x, y;
+   bool matchFlag = false;
+   
+   cin >> a1;
+   cin >> b1;
+   cin >> c1;
+   
+   cin >> a2;
+   cin >> b2;
+   cin >> c2;
+   
+   for (x = -10; x < 10; x++) {
+      for (y = -10; y < 10; y++) {
+         equation1 = (a1 * x) + (b1 * y);
+         equation2 = (a2 * x) + (b2 * y);
+         
+         if (equation1 == c1 && equation2 == c2) {
+            cout << x << " " << y << endl;
+            matchFlag = true;
+            break;
+         } // End If
+      } // End For Loop 2
+   } // End For Loop 1
+   
+   if (matchFlag == false) {
+      cout << "No solution" << endl;
+   }
+
+   return 0;
+}

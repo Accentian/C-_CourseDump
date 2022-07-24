@@ -1,0 +1,53 @@
+?/**
+ 
+* Write a C program to enter radius of a circle and find its diameter, circumference and area.
+ **/
+
+
+
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+
+int main()
+{
+    
+
+const double PI = 3.14;
+    
+double radius;
+    
+double diameter, circumference, area;
+    
+    
+
+cout << "Enter radius of circle: "; 
+    
+cin >> radius;
+    
+    
+
+diameter = 2 * radius;
+    
+circumference = 2 * PI * radius;
+    
+area = PI * pow(radius, 2);
+    
+    
+
+cout << "Radius = " << radius << endl;
+    
+cout << "Diameter = " << diameter << endl;
+    
+cout << "Circumference = " << circumference << endl;
+    
+cout << "Area = " << area << endl;
+    
+    
+
+return 0;
+
+}

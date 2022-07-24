@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+	char moreStudent = 'y'; // Loop variable
+	double sum;
+	int count;
+
+	sum = 0;
+	count = 0;
+
+	while (moreStudent == 'y') {
+		// Loop body
+		int score;
+		cout << "Enter a student score: ";
+		cin >> score;
+
+		sum = sum + score;
+		count++;
+
+		// Update loop variable
+		cout << "Are there more students? (y/n): ";
+		cin >> moreStudent;
+	}
+
+	double average = sum / count;
+
+	cout << fixed << setprecision(2);
+	cout << "Class average = " << average << endl;
+
+	system("pause");
+	return 0;
+}

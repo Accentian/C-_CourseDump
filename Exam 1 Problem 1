@@ -1,0 +1,41 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+double length = 0;
+double width = 0;
+double depth = 0;
+double volume = 0;
+
+int compostToBuy = 0;
+const int compostAmount = 24;
+
+cout << "Please enter the length of the garden bed:" << endl;
+cin >> length;
+
+cout << "Please enter the width of the garden bed:" << endl;
+cin >> width;
+
+cout << "Please enter the depth of the garden bed:" << endl;
+cin >> depth;
+
+// Calculation of volume and compost
+volume = (length * width * depth);
+
+/**Testing calculation - compostToBuy = volume / compostAmount;
+cout << compostToBuy << endl; **/
+
+// Set output two digits after decimal point
+cout << fixed << setprecision(2);
+
+// Testing variables - cout << length << " " << width << " " << depth << endl;
+
+cout << "The volume of the garden bed is: " << volume << endl << endl;
+
+compostToBuy = ceil(volume / compostAmount);
+cout << "The amount of compost bags needed to fill the bed is: " << compostToBuy << " cu.ft of compost" << endl;
+
+system("pause");
+return 0;
+}

@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int monthNum;
+
+cout << "Enter a month number and you will receive the number of days in that month: " << endl;
+cin >> monthNum;
+
+// Jan. Mar. May Jul. Aug. Oct. Dec. have 31 days / Sept. Apr. Jun. Nov. have 30 days / Feb. has 28 days
+if (monthNum == 1) {
+cout << "There are 31 days in the month of Jan." << endl;
+}
+else if (monthNum == 2) {
+cout << "There are 28 days in the month of Feb." << endl;
+}
+else if (monthNum == 3) {
+cout << "There are 31 days in the month of Mar." << endl;
+}
+else if (monthNum == 4) {
+cout << "There are 30 days in the month of Apr." << endl;
+}
+else if (monthNum == 5) {
+cout << "There are 31 days in the month of May." << endl;
+}
+else if (monthNum == 6) {
+cout << "There are 30 days in the month of Jun." << endl;
+}
+else if (monthNum == 7) {
+cout << "There are 31 days in the month of Jul." << endl;
+}
+else if (monthNum == 8) {
+cout << "There are 31 days in the month of Aug." << endl;
+}
+else if (monthNum == 9) {
+cout << "There are 30 days in the month of Sept." << endl;
+}
+else if (monthNum == 10) {
+cout << "There are 31 days in the month of Oct." << endl;
+}
+else if (monthNum == 11) {
+cout << "There are 30 days in the month of Nov." << endl;
+}
+else if (monthNum == 12) {
+cout << "There are 31 days in the month of Dec." << endl;
+}
+
+// Invalid entry
+else {
+cout << "You entered an invalid month number. Please enter a number between 1 to 12." << endl;
+}
+
+system("pause");
+return 0;
+}

@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+int main() {
+   string userString;
+   
+   cin >> userString;
+
+   /* Type your code here. */
+   bool intCheck;
+   for (int i = 0; i < userString.size(); ++i) {
+      if(isdigit(userString.at(i))){
+         intCheck = true;
+      }
+      else {
+         intCheck = false;
+         break;
+      }
+   }
+   
+   if (intCheck == true){
+      cout << "yes" << endl;
+   }
+   else {
+      cout << "no" << endl;
+   }
+
+   return 0;
+}
